@@ -9,7 +9,7 @@ const Landing = () => {
       <a href="/services"><img src={logo} /></a>
       <p>{intro}</p>
       <p>Click our logo to book your appointment today!</p>
-      <p>Or contact us by email: <a href=":mailto:supportbutton@driveway.com">supportbutton@driveway.com</a> or by phone: <a href="te:555-872-3289">555-872-3289</a></p>
+      <p>Or contact us by email: <a href="mailto:supportbutton@driveway.com">supportbutton@driveway.com</a> or by phone: <a href="tel:555-872-3289">555-872-3289</a></p>
     </div>
   );
 };

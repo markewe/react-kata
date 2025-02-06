@@ -26,9 +26,14 @@ export interface IBookAppointment {
 export const bookAppointment = async (appointment: IBookAppointment): Promise<Partial<IAppointment>> => {
   const { appointmentId } = appointment
 
+
+
   try {
     const response = await fetch(`${apiEndpoint}/appointments/book/${appointmentId}`,
       { 
+        headers: {
+          "Content-Type": "application/json",
+        },
         method: 'PATCH',
         body: JSON.stringify(appointment)
       }

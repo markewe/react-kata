@@ -7,9 +7,20 @@ import Appointment from "./Appointment/Appointment"
 const Appointments = () => {
     const params = useParams()
     const [appointments, setAppointments] = useState<IAppointment[]>([])
+    const [loaded, setLoaded] = useState<boolean>(false)
 
     const init = async (serviceId: number) => {
-        setAppointments(await getAppointments(serviceId))
+        const response =  await getAppointments(serviceId)
+
+        console.log('response', response)
+
+        if (response.length) {
+            console.log('response.length')
+
+            setAppointments(response)
+        }
+
+        setLoaded(true)
     }
 
     useEffect(() => {
@@ -22,7 +33,7 @@ const Appointments = () => {
 
     return (
         <div className="appointmentsWrapper">
-            {appointments.length ? (
+            {appointments.length && loaded ? (
                 <>
                     <h1>Book Your Service Appointment</h1>
                     <p>Click on an appointment to book</p>
@@ -35,7 +46,10 @@ const Appointments = () => {
                     </div>
                 </>
             ) : (
-                <h1>Loading Service Appointments</h1>                
+                <>
+                    {loaded && <h1>No Appointments Available</h1>}
+                    {!loaded && <h1>Loading Service Appointments</h1>}
+                </>
             )}
             
         </div>

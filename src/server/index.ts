@@ -91,6 +91,9 @@ app.get("/appointments/:serviceId", (req, res) => {
 
 app.patch("/appointments/book/:id", (req, res) => {
   const { email, customerName, modelYear, make, model } = req.body;
+
+  console.log('email', req.body, email)
+
   const appt = appointments.find((appt) => appt.id === req.params.id);
 
   if (!appt) {
