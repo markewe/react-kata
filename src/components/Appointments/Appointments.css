@@ -1,0 +1,10 @@
+.appointmentsWrapper {
+    text-align: center;
+    width: 100%;
+}
+
+.appointmentButtons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}

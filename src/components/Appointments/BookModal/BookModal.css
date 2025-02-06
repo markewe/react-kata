@@ -1,0 +1,64 @@
+.bookModalCloseButton {
+    border: none;
+    background: none;
+    top: 10px;
+    position: absolute;
+    right: 10px;
+}
+
+.bookModalForm {
+    box-sizing: border-box;
+    background: white;
+    border-radius: 5px;
+    left: calc(50% - (480px / 2));
+    padding: 20px;
+    position: absolute;
+    max-width: 480px;
+    width: 100%;
+    z-index: 1;
+}
+
+.bookModalFormFields {
+    width: 100%;
+}
+
+.bookModalFormHeader {
+    margin-top: 0;
+}
+
+.bookModalFormRow {
+    display: flex;
+    padding-bottom: 5px;
+    width: 80%;
+}
+
+.bookModalFormSubmit {
+    background: none;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 5px;
+}
+
+.bookModalFormColumn {
+    display: inline-block;
+    width: 50%;
+}
+
+.bookModalFormLabel {
+    padding-right: 10px;
+    text-align: right;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.successIcon {
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,24 @@
+.serviceLink {
+    align-items: center;
+    background: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    justify-content: center;
+    margin: 0 10px;
+    text-decoration: none;
+    width: 400px;
+}
+
+.serviceName {
+    font-size: 1.2rem;
+}
+
+.serviceIcon {
+    height: 100px;
+    width: 100px;
+}
